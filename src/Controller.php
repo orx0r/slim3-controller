@@ -58,6 +58,14 @@ class Controller
         throw new \RuntimeException(sprintf('Method %s does not exist', get_class($this) . "::$name()"));
     }
 
+    /**
+     * @deprecated
+     *
+     * @param string $template
+     * @param array  $data
+     *
+     * @return mixed
+     */
     public function render($template, $data = [])
     {
         return $this->container->get('view')->render($this->response, $template, $data);
