@@ -22,7 +22,7 @@ $ composer require orx0r/slim3-controller
 Please see [example](https://github.com/orx0r/slim3-controller/tree/master/example) how it works in action
 ``` php
 // in index.php
-$app->get('/hello/{name}', 'app\\controllers\\HelloController:index');
+$app->get('/hello/{name}', 'app\controllers\HelloController:index');
 
 // in app/controllers/HelloController.php
 
@@ -54,7 +54,7 @@ $c['view'] = function ($container) {
     return $view;
 };
 
-$app->get('/hello/{name}', 'app\\controllers\\HelloController:index');
+$app->get('/hello/{name}', 'app\controllers\HelloController:index');
 
 // in app/controllers/HelloController.php
 public function actionIndex($name)
@@ -70,7 +70,7 @@ It works without breaking your old code
 ```php
 // register CallableResolver. pass second parameter as controllerNamespace
 $c['callableResolver'] = function ($container) {
-    return new CallableResolver($container, 'app\\controllers');
+    return new CallableResolver($container, 'app\controllers');
 };
 
 $app->get('/hello/{name}', 'HelloController:index');

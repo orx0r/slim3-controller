@@ -28,14 +28,14 @@ $app->get('/hello/{name}', function (Request $request, Response $response, $args
 });
 
 // version with controller
-$app->get('/greet/{greet}/[{name}]', 'app\\controllers\\MainController:greet');
+$app->get('/greet/{greet}/[{name}]', 'app\controllers\MainController:greet');
 
 // in small Slim app you can use controllerNamespace for resolving
 // all your controllers in same namespace by specifying only controller name
 
 // register CallableResolver. pass second parameter as controllerNamespace
 $c['callableResolver'] = function ($container) {
-    return new CallableResolver($container, 'app\\controllers');
+    return new CallableResolver($container, 'app\controllers');
 };
 
 // version with controllerNamespace
