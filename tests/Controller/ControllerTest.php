@@ -21,7 +21,7 @@ use Slim\Http\Uri;
 
 /**
  * Class ControllerTest
- * 
+ *
  * @package Orx0r\Slim\Controller\Tests
  * @covers Orx0r\Slim\Controller\Controller
  */
@@ -44,15 +44,6 @@ class ControllerTest extends \PHPUnit_Framework_TestCase
         $controller = new Controller($this->container);
         $callable_service = $controller->callable_service;
         $this->assertInstanceOf('Orx0r\Slim\Controller\Tests\Mocks\CallableTest', $callable_service);
-
-//        $settings = ['a', 'b'];
-//        $container = new Container();
-//        $container['settings'] = $settings;
-//        $controller = new Controller($container);
-
-//        $this->assertInstanceOf('\Slim\Container', $controller->getContainer());
-//        $this->assertEquals(true, isset($controller->settings));
-//        $this->assertEquals($settings, $controller->settings);
     }
 
     public function testPropertyNotFoundThrowException()
