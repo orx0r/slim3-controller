@@ -59,10 +59,12 @@ class Controller
     }
 
     /**
-     * @deprecated
+     * Shorthand method for render templates
      *
-     * @param string $template
-     * @param array  $data
+     * @link http://www.slimframework.com/docs/features/templates.html
+     *
+     * @param string $template Template pathname relative to templates directory
+     * @param array  $data     Associative array of template variables
      *
      * @return mixed
      */
